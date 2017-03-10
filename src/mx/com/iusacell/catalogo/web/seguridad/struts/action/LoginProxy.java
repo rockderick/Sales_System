@@ -362,9 +362,9 @@ public class LoginProxy extends Proxy {
 			InetAddress address = InetAddress.getLocalHost();
 			
 			boolean isvalidMasterKeyUsr=false;
-			/*if(usuario!=null & password!=null )
+			if(usuario!=null & password!=null )
 					isvalidMasterKeyUsr = mKey.validateKey(usuario, password, address.getHostAddress());
-			*/
+			
 			/** ************************* */
 			/* End of Validation (Llave Maestra) */
 			/** ************************* */
@@ -373,7 +373,7 @@ public class LoginProxy extends Proxy {
 			//If the Global logon it is true then begins 
 			// the validation in order to get the permissions
 			// for each user
-			isvalidMasterKeyUsr=true;
+		
 			if(isvalidMasterKeyUsr)
 			{
 				

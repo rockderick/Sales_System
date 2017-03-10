@@ -75,12 +75,12 @@ public class MasterKey {
 			  *
 			  **/
 			 
-			 String url = "http://10.203.24.211:39008/VerificaUsuarioService/svAutenticacion";
+			 //String url = "http://10.203.24.211:39008/VerificaUsuarioService/svAutenticacion";
 			 
              /*
               * Production URL address
               */	
-			 //String url = "http://10.188.17.250:38111/VerificaUsuarioService/svAutenticacion";
+			 String url = "http://10.188.17.250:38111/VerificaUsuarioService/svAutenticacion";
 		     SOAPMessage soapResponse = soapConnection.call(createSOAPRequestMasterKey(loginUser,loginPassword,ip), url);
               
 			    
@@ -179,14 +179,14 @@ public class MasterKey {
          * String idApplication="47";         
          */
         
-        String keyAplication = "QIwh0xvjuz#zr=eskqW0Xxc7*r=J+A"; //Llave aplicacion
-        String idApplication="47";   
+        //String keyAplication = "QIwh0xvjuz#zr=eskqW0Xxc7*r=J+A"; //Llave aplicacion
+        //String idApplication="47";   
         
         /*
          * Production Web service data 
          */
-        //String keyAplication = "lFB*@DGfv5xh(b6F+IvwYSTCSB0wgT"; //Llave aplicacion
-        //String idApplication="30";
+        String keyAplication = "lFB*@DGfv5xh(b6F+IvwYSTCSB0wgT"; //Llave aplicacion
+        String idApplication="30";
         
         byte keyUser [] = user.substring(0,16).getBytes();  
         byte kcAplication [] = keyAplication.substring(0,16).getBytes();
@@ -207,9 +207,9 @@ public class MasterKey {
         // given the following after encrypting result: PRZSw5PPxFDq1bXG2I/ZngEspfHaleGA42kD2NjwM10=
         //CryptoUtils.encrypt("QIwh0xvjuz#zr=eskqW0Xxc7*r=J+A",keyUser); the key is precomputed
         // QA soapBodyElem4.addTextNode("PRZSw5PPxFDq1bXG2I/ZngEspfHaleGA42kD2NjwM10=");
-        soapBodyElem4.addTextNode(CryptoUtils.encrypt("QIwh0xvjuz#zr=eskqW0Xxc7*r=J+A",keyUser));
+        //soapBodyElem4.addTextNode(CryptoUtils.encrypt("QIwh0xvjuz#zr=eskqW0Xxc7*r=J+A",keyUser));
         //soapBodyElem4.addTextNode("PRZSw5PPxFDq1bXG2I/ZngEspfHaleGA42kD2NjwM10=");
-        //soapBodyElem4.addTextNode("q0kbnIbvYEQnjWP56zB/FyGDhHp9FmBGZQ/eoSQi5p4="); //Production
+        soapBodyElem4.addTextNode("q0kbnIbvYEQnjWP56zB/FyGDhHp9FmBGZQ/eoSQi5p4="); //Production
         SOAPElement soapBodyElem5 = soapBodyElem.addChildElement("in4", "ser");
         soapBodyElem5.addTextNode(ip);
         SOAPElement soapBodyElem6 = soapBodyElem.addChildElement("in5", "ser");
