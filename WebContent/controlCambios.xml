@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<control_cambios>
+<cambio id="1">
+	<fecha>04/11/2005</fecha>
+	<descripcion>
+		Se corrigio un problema que permite seleccionar puntos de venta que no estan en la división. 
+		Esto ocasionaba que el superior no se encontrara a pesar de que aparecio correctamente en la
+		lista de la segunda pagina.
+	</descripcion>
+	<modulo nombre="Vendedores">
+		<problema>Si la division es nula no la tomaba en cuenta en el Query por omisión</problema>
+		<modificaciones>
+			<archivo nombre="VendedoresProxy">
+				<metodo nombre="buscarPuntoVentas" />
+				<metodo nombre="consultar"/>
+			</archivo>
+			<solucion>Se forzo a la division del usuario si la division es nula</solucion>
+		</modificaciones>
+	</modulo>
+	<comentarios/>
+</cambio>
+
+<cambio id="2">
+	<fecha>04/11/2005</fecha>
+	<descripcion>
+	</descripcion>
+	<modulo nombre="Personal">
+		<problema>El sistema producia un error al intentar borrar un vendedor</problema>
+		<modificaciones>
+			<archivo nombre="PersonalProxy">
+				<metodo nombre="desasignarPersonal" />
+				<metodo nombre="eliminar" />
+			</archivo>
+			<archivo nombre="CatalogoFacade">
+				<metodo nombre="noSuperiorPersonal" />
+			</archivo>
+			<archivo nombre="queriesSCCV">
+				<query numero="60"/>
+			</archivo>
+			<solucion>
+				Se cambio el metodo desasignar personal, para colocar la division en lugar de nulo como se venía haciendo.
+				Ahora el vendedor se marca como baja en caso de que existan relaciones, y se envia un mensaje para advertir al usuario.
+			</solucion>
+		</modificaciones>
+	</modulo>
+	<comentarios/>
+</cambio>
+
+<cambio id="3">
+	<fecha>04/12/2005</fecha>
+	<descripcion>
+	</descripcion>
+	<modulo nombre="Personal">
+		<problema>Se elimino por peticion del usuario la opcion de borrado</problema>
+		<modificaciones>
+			<archivo nombre="PersonalForma.jsp"/>
+			<solucion>
+				Se elimino el boton de eliminar de la pagina pero aun se conserva el Div para no afectar el JavaScript
+			</solucion>
+		</modificaciones>
+	</modulo>
+	<comentarios/>
+</cambio>
+<cambio id="4">
+	<fecha>04/12/2005</fecha>
+	<descripcion>
+	</descripcion>
+	<modulo nombre="Personal">
+		<problema>Se generaban mal los reportes de árbol por division</problema>
+		<modificaciones>
+			<archivo nombre="queriesSCCV">
+				<query numero="93"/>
+			</archivo>
+			<solucion>
+				El error era causado por una clausula Order By que acababa con el orden del árbol.
+				Se elimino dicha clausula
+			</solucion>
+		</modificaciones>
+	</modulo>
+	<comentarios/>
+</cambio>
+<cambio id="5">
+	<fecha>04/12/2005</fecha>
+	<descripcion>
+	</descripcion>
+	<modulo nombre="Reportes">
+		<problema>El sistema de generacion de reporte estaba muy lento y causaba problemas de memoria en el servidor</problema>
+		<modificaciones>
+			<archivo nombre="ReporteArbolProxy">
+				<metodo nombre="generarArregloDetalle" nuevo="1" />
+				<metodo nombre="verLista" />
+				<metodo nombre="consultar" />
+				<metodo nombre="generarArbolTienda" />
+			</archivo>
+			<archivo nombre="ReporteForma.jsp"/>
+			<archivo nombre="Reporte.js"/>
+			<solucion>
+				Exceso de uso de struts logic tags y un Iterate estaban ocasionando sobre carga en la memoria.
+				Se sustituyo por lo siguiente:
+				1) En la forma de construir el arbol y sus datos de detalle se regresa un String en lugar de un ArrayList
+				2) Los detalles se toman de una construccion de Array en JS y no de un conjunto de elementos Html Hidden como sucedia
+				3) Se corrigio Reporte.js para reflejar los cambios en la forma de desplegar los detalles.
+			</solucion>
+		</modificaciones>
+	</modulo>
+	<comentarios/>
+</cambio>
+</control_cambios>

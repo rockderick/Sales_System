@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<MenuConfig>
+
+  <Displayers>
+    <Displayer   name="DropDown"
+                 type="net.sf.navigator.displayer.DropDownMenuDisplayer"/>
+    <Displayer   name="Simple"
+                 type="net.sf.navigator.displayer.SimpleMenuDisplayer"/>
+    <Displayer   name="CoolMenu"
+                 type="net.sf.navigator.displayer.CoolMenuDisplayer"/>
+    <Displayer   name="CoolMenu4"
+                 type="net.sf.navigator.displayer.CoolMenuDisplayer4"/>
+    <Displayer   name="MenuForm"
+                 type="net.sf.navigator.example.PermissionsFormMenuDisplayer"/>
+    <Displayer   name="ListMenu"
+                 type="net.sf.navigator.displayer.ListMenuDisplayer"/>
+    <Displayer   name="TabbedMenu"
+                 type="net.sf.navigator.displayer.TabbedMenuDisplayer"/>
+    <Displayer   name="Velocity"
+                 type="net.sf.navigator.displayer.VelocityMenuDisplayer"/>
+  </Displayers>
+
+  <Menus>
+
+    <!-- New Menu for Tabbed Displayer -->
+    <Menu name="Home" title="Inicio" page="Login.do?action=cambio"/>
+    <Menu name="Vendedores" title="Vendedores" page="VendedoresAction.do"> 
+        <Item name="Asistente" title="Asistente" page="VendedoresAction.do"/>
+        <Item name="Mapeos" title="Mapeos" page="ClaveReferenciaAction.do"/>
+    </Menu>
+    <Menu name="Personal" title="Personal" page="PersonalMovAction.do">  <!--  PersonalAction.do -->
+        <!-- <Item name="Actualizar" title="Personal" page="PersonalAction.do"/> -->
+        <Item name="Administrador" title="Administrador" page="PersonalMovAction.do"/>
+    </Menu>
+    <Menu name="PuntosVenta" title="Puntos de Venta" page="PuntosVentaAction.do"/> 
+    <Menu name="Relaciones" title="Relaciones" page="RelacionesAction.do"/> 
+    <Menu name="Reportes" title="Reportes" page="ReporteArbolAction.do"> 
+        <Item name="Organigrama" title="Organigrama" page="ReporteArbolAction.do"/>
+        <Item name="Movimientos" title="Movimientos" page="ReporteMovimientoAction.do"/>
+        <Item name="Puntos de Venta" title="Reporte Puntos de Ventas" page="ReportePtoVentasAction.do"/>
+        <Item name="Checador" title="Reporte Checador" page="ChecadorAction.do"/>
+    </Menu>
+    <Menu name="Auxiliares" title="Catálogo" page="PuestosAction.do">
+        <Item name="Puestos" title="Puestos" page="PuestosAction.do"/>
+        <Item name="PuestosArbol" title="Puestos en Arbol" page="PuestosArbolAction.do"/>
+        <Item name="Regiones" title="Regiones" page="RegionesAction.do"/>
+        <Item name="TipoCanal" title="Tipo de Canal" page="TipoCanalesAction.do"/>
+        <Item name="Canales" title="Canales" page="CanalesAction.do"/>
+        <Item name="Division" title="División" page="DivisionAction.do"/>
+        <Item name="Empresa" title="Empresa" page="EmpresaAction.do"/>
+        <Item name="Marcas" title="Marcas" page="MarcasAction.do"/>
+        <Item name="Horarios" title="Horarios" page="HorariosAction.do"/>
+    </Menu> 
+   
+   <Menu name="Contraseña" title="Contraseña" page="/CambiarPassword.jsp"/>
+			
+       <Menu name="SysAdmin" title="Sistema" page="AcctMgr.do"> 
+        <Item name="Cuentas" title="Cuentas" page="AcctMgr.do"/>
+        <Item name="Acceso" title="Acceso" page="AccsMgr.do"/>
+        <Item name="Roles" title="Roles" page="AdmRoles.do"/>
+    </Menu>
+    <!-- agregado -->
+    <Menu name="SysAdminMapeo" title="Mapeo" page="/ClaveReferenciaActionSysAdmin.do"> 
+        <Item name="Mapeo" title="Mapeo" page="/ClaveReferenciaActionSysAdmin.do"/>
+    </Menu>
+     <Menu name="SysAdminReportes" title="Reportes" page="ReporteArbolActionSysAdmin.do"> 
+        <Item name="Organigrama" title="Organigrama" page="ReporteArbolActionSysAdmin.do"/>
+    </Menu>
+     <Menu name="AuxiliaresConsulta" title="Catálogo" page="TipoCanalesAction.do">
+        <Item name="TipoCanal" title="Tipo de Canal" page="TipoCanalesAction.do"/>
+        <Item name="Canales" title="Canales" page="CanalesAction.do"/>
+        <Item name="Division" title="División" page="DivisionAction.do"/>
+        <Item name="PuntosVenta" title="Puntos de Venta" page="PuntosVentaActionC.do"/>
+     </Menu> 
+    
+    <Menu name="PuntoVentaConsulta" title="Puntos de Venta" page="PuntosVentaActionC.do">
+	    <Item name="PuntosVenta" title="Puntos de Venta" page="PuntosVentaActionC.do"/>
+    </Menu>
+    
+    <Menu name="Configuracion" title="Configuración" page="ConfigValoresVentaAction.do" />
+    <!--  agregado -->
+    
+  </Menus>
+
+</MenuConfig>

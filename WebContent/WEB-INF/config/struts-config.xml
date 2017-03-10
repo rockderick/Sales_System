@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+
+
+
+<!--
+     This is a blank Struts configuration file with an example
+     welcome action/page and other commented sample elements.
+
+     Tiles and the Struts Validator are configured using the factory defaults
+     and are ready-to-use.
+
+     NOTE: If you have a generator tool to create the corresponding Java classes
+     for you, you could include the details in the "form-bean" declarations.
+     Otherwise, you would only define the "form-bean" element itself, with the
+     corresponding "name" and "type" attributes, as shown here.
+-->
+
+
+<struts-config>
+
+<!-- ============================================ Data Source Configuration -->
+<!--
+<data-sources>
+<data-source type="org.apache.commons.dbcp.BasicDataSource">
+    <set-property
+      property="driverClassName"
+      value="org.postgresql.Driver" />
+    <set-property
+      property="url"
+      value="jdbc:postgresql://localhost/mydatabase" />
+    <set-property
+      property="username"
+      value="me" />
+    <set-property
+      property="password"
+      value="test" />
+    <set-property
+      property="maxActive"
+      value="10" />
+    <set-property
+      property="maxWait"
+      value="5000" />
+    <set-property
+      property="defaultAutoCommit"
+      value="false" />
+    <set-property
+      property="defaultReadOnly"
+      value="false" />
+    <set-property
+      property="validationQuery"
+      value="SELECT COUNT(*) FROM market" />
+</data-source>
+</data-sources>
+-->
+
+<!-- ================================================ Form Bean Definitions -->
+
+    <form-beans>
+			<form-bean name="LoginForm" type="mx.com.iusacell.catalogo.web.seguridad.struts.action.LoginForm"/>
+			<form-bean name="PuestosForm" type="mx.com.iusacell.catalogo.web.auxiliares.struts.action.PuestosForm"/>
+			<form-bean name="PuestosArbolForm" type="mx.com.iusacell.catalogo.web.auxiliares.struts.action.PuestosArbolForm"/>
+			<form-bean name="RegionesForm" type="mx.com.iusacell.catalogo.web.auxiliares.struts.action.RegionesForm"/>
+			<form-bean name="TipoCanalesForm" type="mx.com.iusacell.catalogo.web.auxiliares.struts.action.TipoCanalesForm"/>
+			<form-bean name="CanalesForm" type="mx.com.iusacell.catalogo.web.auxiliares.struts.action.CanalesForm"/>
+			<form-bean name="PuntosVentaForm" type="mx.com.iusacell.catalogo.web.puntosventa.struts.action.PuntosVentaForm"/>
+			<form-bean name="VendedoresForm" type="mx.com.iusacell.catalogo.web.vendedores.struts.action.VendedoresForm"/>
+			<form-bean name="RelacionesForm" type="mx.com.iusacell.catalogo.web.relacion.struts.action.RelacionesForm"/>
+			<form-bean name="DivisionForm" type="mx.com.iusacell.catalogo.web.auxiliares.struts.action.DivisionForm"/>
+			<form-bean name="SubdivisionForm" type="mx.com.iusacell.catalogo.web.auxiliares.struts.action.SubdivisionForm"/>
+			<form-bean name="ReporteArbolForm" type="mx.com.iusacell.catalogo.web.reporte.struts.action.ReporteArbolForm"/>
+			<form-bean name="ReporteMovimientoForm" type="mx.com.iusacell.catalogo.web.reporte.struts.action.ReporteMovimientoForm"/>
+			<form-bean name="ReportePtoVentasForm" type="mx.com.iusacell.catalogo.web.reporte.struts.action.ReportePtoVentasForm"/>
+			<form-bean name="PersonalForm" type="mx.com.iusacell.catalogo.web.personal.struts.action.PersonalForm"/>
+			<form-bean name="PersonalMovForm" type="mx.com.iusacell.catalogo.web.personal.struts.action.PersonalMovForm"/>
+			<form-bean name="ClaveReferenciaForm" type="mx.com.iusacell.catalogo.web.vendedores.struts.action.ClaveReferenciaForm"/>
+			<form-bean name="AsistPuestoForm" type="mx.com.iusacell.catalogo.web.asistentes.struts.action.AsistPuestoForm"/>
+			<form-bean name="AsistPtoventasForm" type="mx.com.iusacell.catalogo.web.asistentes.struts.action.AsistPtoventasForm"/>
+			<form-bean name="AsistSuperiorForm" type="mx.com.iusacell.catalogo.web.asistentes.struts.action.AsistSuperiorForm"/>
+			<form-bean name="AsistReasignarForm" type="mx.com.iusacell.catalogo.web.asistentes.struts.action.AsistReasignarForm"/>
+			<form-bean name="AcctManagerForm" type="mx.com.iusacell.sysadmin.web.sysadmin.struts.action.AcctManagerForm"/>
+			<form-bean name="AccsManagerForm" type="mx.com.iusacell.sysadmin.web.sysadmin.struts.action.AccsManagerForm"/>
+			<form-bean name="AdmRolesForm" type="mx.com.iusacell.sysadmin.web.sysadmin.struts.action.AdmRolesForm"/>
+			<form-bean name="ConsultaForm" type="mx.com.iusacell.sysconsulta.web.sysconsulta.struts.action.ConsultaForm"/>
+			<form-bean name="HorariosForm" type="mx.com.iusacell.catalogo.web.auxiliares.struts.action.HorariosForm"/>
+			<form-bean name="EmpresaForm" type="mx.com.iusacell.catalogo.web.empresa.struts.action.EmpresaForm"/>
+			<form-bean name="MarcasForm" type="mx.com.iusacell.catalogo.web.auxiliares.struts.action.MarcasForm"/>
+			<form-bean name="ChecadorForm" type="mx.com.iusacell.catalogo.web.reporte.struts.action.ChecadorForm"/>
+			<form-bean name="ConfigValoresVentaForm" type="mx.com.iusacell.catalogo.web.valoresVenta.struts.action.ConfigValoresVentaForm"/>
+    </form-beans>
+
+
+<!-- ========================================= Global Exception Definitions -->
+
+    <global-exceptions>
+        <!-- sample exception handler
+        <exception
+            key="expired.password"
+            type="app.ExpiredPasswordException"
+            path="/changePassword.jsp"/>
+        end sample -->
+    </global-exceptions>
+
+
+<!-- =========================================== Global Forward Definitions -->
+
+    <global-forwards>
+        <!-- Default forward to "Welcome" action -->
+        <!-- Demonstrates using index.jsp to forward -->
+        <forward name="welcome" path="/Welcome.do"/>
+        <forward name="error" path="/catalogo/CatalogoErrorMessage.jsp"></forward>
+		<forward name="success" path="/catalogo/CatalogoMessage.jsp"></forward>
+		<forward name="unauthorized" path="/catalogo/CatalogoUnauthorized.jsp"></forward>
+        <forward name="sysadmin" path="/AcctMgr.do" redirect="true"/>
+   
+    </global-forwards>
+    
+    
+
+
+<!-- =========================================== Action Mapping Definitions -->
+
+    <action-mappings>
+            <!-- Default "Welcome" action -->
+            <!-- Forwards to Welcome.jsp -->
+        <action path="/Welcome" type="mx.com.iusacell.catalogo.web.seguridad.struts.action.LoginAction" name="LoginForm" scope="request" validate="false">
+        	<forward name="error" path="/ini.jsp" />
+        	<forward name="home" path="/AdminCatalogoHome.jsp" />
+        	<forward name="login" path="/AdminCatalogoHome.jsp" /> 
+        	<forward name="index" path="/index.jsp" />
+		    </action>	
+        
+        
+        <action
+            path="/CargaMenu" forward="/AdminCatalogoHome.jsp"/>
+        
+        <action
+            path="/Inicio" forward="/AdminCatalogoHome.jsp"/>
+
+ 
+
+    <!-- sample input and input submit actions
+
+        <action
+            path="/Input"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="/pages/Input.jsp"/>
+
+        <action
+            path="/InputSubmit"
+            type="app.InputAction"
+            name="inputForm"
+            scope="request"
+            validate="true"
+            input="/pages/Input.jsp"/>
+
+            <action
+                path="/edit*"
+                type="app.Edit{1}Action"
+                name="inputForm"
+                scope="request"
+                validate="true"
+                input="/pages/Edit{1}.jsp"/>
+
+    end samples -->
+  		<action path="/Login" type="mx.com.iusacell.catalogo.web.seguridad.struts.action.LoginAction" name="LoginForm" scope="request" validate="false" input="/AdminCatalogoHome.jsp">
+			<forward name="error" path="ini.jsp" />
+			<!--<forward name="Salir" path="http://portal.gruposalinas.com.mx/Gruposalinas/corporativo" contextRelative="true" redirect="true" /> -->
+			<forward name="Salir" path="/AdminCatalogoHome.jsp"/>
+			<forward name="home" path="/AdminCatalogoHome.jsp" /> 
+			<forward name="login" path="/AdminCatalogoHome.jsp" /> 
+			<forward name="CambiarPassword" path="/CambiarPassword.jsp"/>
+			<forward name="GuardarPassword" path="/AdminCatalogoHome.jsp"/>
+			<forward name="index" path="/index.jsp" />
+		</action>		
+		<action path="/PuestosAction" type="mx.com.iusacell.catalogo.web.auxiliares.struts.action.PuestosAction" scope="request" validate="false" name="PuestosForm" input="/catalogo/PuestosForma.jsp">  
+			<forward name="home" path="/catalogo/PuestosForma.jsp"/>
+			<forward name="agregar" path="/catalogo/PuestosForma.jsp"/>
+			<forward name="eliminar" path="/catalogo/PuestosForma.jsp"/>
+			<forward name="modificar" path="/catalogo/PuestosForma.jsp"/>
+			<forward name="consultar" path="/catalogo/PuestosForma.jsp"/>
+		</action>
+		<action path="/PuestosArbolAction" type="mx.com.iusacell.catalogo.web.auxiliares.struts.action.PuestosArbolAction" scope="request" validate="false" name="PuestosArbolForm" input="/catalogo/PuestosArbolForma.jsp">  
+			<forward name="home" path="/catalogo/PuestosArbolForma.jsp"/>
+			<forward name="agregar" path="/catalogo/PuestosArbolForma.jsp"/>
+			<forward name="eliminar" path="/catalogo/PuestosArbolForma.jsp"/>
+			<forward name="modificar" path="/catalogo/PuestosArbolForma.jsp"/>
+			<forward name="consultar" path="/catalogo/PuestosArbolForma.jsp"/>
+		</action>
+		<action path="/RegionesAction" type="mx.com.iusacell.catalogo.web.auxiliares.struts.action.RegionesAction" scope="request" validate="false" name="RegionesForm" input="/catalogo/RegionesForma.jsp">  
+			<forward name="home" path="/catalogo/RegionesForma.jsp"/>
+			<forward name="agregar" path="/catalogo/RegionesForma.jsp"/>
+			<forward name="eliminar" path="/catalogo/RegionesForma.jsp"/>
+			<forward name="modificar" path="/catalogo/RegionesForma.jsp"/>
+			<forward name="consultar" path="/catalogo/RegionesForma.jsp"/>
+		</action>
+		<action path="/DivisionAction" type="mx.com.iusacell.catalogo.web.auxiliares.struts.action.DivisionAction" scope="request" validate="false" name="DivisionForm" input="/catalogo/DivisionForma.jsp">  
+			<forward name="home" path="/catalogo/DivisionForma.jsp"/>
+			<forward name="agregar" path="/catalogo/DivisionForma.jsp"/>
+			<forward name="eliminar" path="/catalogo/DivisionForma.jsp"/>
+			<forward name="modificar" path="/catalogo/DivisionForma.jsp"/>
+			<forward name="consultar" path="/catalogo/DivisionForma.jsp"/>
+		</action>
+		<action path="/TipoCanalesAction" type="mx.com.iusacell.catalogo.web.auxiliares.struts.action.TipoCanalesAction" scope="request" validate="false" name="TipoCanalesForm" input="/catalogo/TipoCanalesForma.jsp">  
+			<forward name="home" path="/catalogo/TipoCanalesForma.jsp"/>
+			<forward name="agregar" path="/catalogo/TipoCanalesForma.jsp"/>
+			<forward name="eliminar" path="/catalogo/TipoCanalesForma.jsp"/>
+			<forward name="modificar" path="/catalogo/TipoCanalesForma.jsp"/>
+			<forward name="consultar" path="/catalogo/TipoCanalesForma.jsp"/>
+		</action>
+		<action path="/CanalesAction" type="mx.com.iusacell.catalogo.web.auxiliares.struts.action.CanalesAction" scope="request" validate="false" name="CanalesForm" input="/catalogo/CanalesHome.jsp">  
+			<forward name="home" path="/catalogo/CanalesHome.jsp"/>
+			<forward name="agregar" path="/catalogo/CanalesAgregar.jsp"/>
+			<forward name="eliminar" path="/catalogo/CanalesEliminar.jsp"/>
+			<forward name="modificar" path="/catalogo/CanalesModificar.jsp"/>
+			<forward name="consultar" path="/catalogo/CanalesForma.jsp"/>
+		</action>
+		<action path="/SubdivisionAction" type="mx.com.iusacell.catalogo.web.auxiliares.struts.action.SubdivisionAction" scope="request" validate="false" name="SubdivisionForm" input="/catalogo/SubdivisionForma.jsp">  
+			<forward name="home" path="/catalogo/SubdivisionForma.jsp"/>
+			<forward name="agregar" path="/catalogo/SubdivisionForma.jsp"/>
+			<forward name="eliminar" path="/catalogo/SubdivisionForma.jsp"/>
+			<forward name="modificar" path="/catalogo/SubdivisionForma.jsp"/>
+			<forward name="consultar" path="/catalogo/SubdivisionForma.jsp"/>
+		</action>
+		<action path="/PuntosVentaAction" type="mx.com.iusacell.catalogo.web.puntosventa.struts.action.PuntosVentaAction" scope="request" validate="false" name="PuntosVentaForm" input="/puntosventa/PuntosVentaForma.jsp">  
+			<forward name="home" path="/puntosventa/PuntosVentaForma.jsp"/>
+			<forward name="agregar" path="/puntosventa/PuntosVentaForma.jsp"/>
+			<forward name="modificar" path="/puntosventa/PuntosVentaForma.jsp"/>
+			<forward name="eliminar" path="/puntosventa/PuntosVentaForma.jsp"/>
+			<forward name="consultar" path="/puntosventa/PuntosVentaForma.jsp"/>
+		</action>
+		<action path="/VendedoresAction" type="mx.com.iusacell.catalogo.web.vendedores.struts.action.VendedoresAction" scope="request" validate="false" name="VendedoresForm" input="/vendedores/VendedoresForma.jsp">  
+			<forward name="home" path="/vendedores/VendedoresForma.jsp"/>
+			<forward name="agregar" path="/vendedores/VendedoresForma.jsp"/>
+			<forward name="modificar" path="/vendedores/VendedoresForma.jsp"/>
+			<forward name="eliminar" path="/vendedores/VendedoresForma.jsp"/>
+			<forward name="consultar" path="/vendedores/VendedoresForma.jsp"/>
+			<forward name="horario" path="/vendedores/HorariosConsultar.jsp"/>
+		</action>
+		<action path="/RelacionesAction" type="mx.com.iusacell.catalogo.web.relacion.struts.action.RelacionesAction" scope="request" validate="false" name="RelacionesForm" input="/relacion/RelacionesForma.jsp">  
+			<forward name="home" path="/relacion/RelacionesForma.jsp"/>
+			<forward name="agregar" path="/relacion/RelacionesForma.jsp"/>
+			<forward name="modificar" path="/relacion/RelacionesForma.jsp"/>
+			<forward name="eliminar" path="/relacion/RelacionesForma.jsp"/>
+			<forward name="consultar" path="/relacion/RelacionesForma.jsp"/>
+		</action>    
+		
+		<action path="/ReporteArbolAction" type="mx.com.iusacell.catalogo.web.reporte.struts.action.ReporteArbolAction" scope="request" validate="false" name="ReporteArbolForm" input="/reporte/ReporteForma.jsp">  
+			<forward name="home" path="/reporte/ReporteForma.jsp"/>
+			<forward name="agregar" path="/reporte/ReporteForma.jsp"/>
+			<forward name="modificar" path="/reporte/ReporteForma.jsp"/>
+			<forward name="eliminar" path="/reporte/ReporteForma.jsp"/>
+			<forward name="consultar" path="/reporte/ReporteForma.jsp"/>
+		</action>
+		
+		<!-- agregado -->
+		<action path="/ReporteArbolActionSysAdmin" type="mx.com.iusacell.catalogo.web.reporte.struts.action.ReporteArbolAction" scope="request" validate="false" name="ReporteArbolForm" input="/reporte/ReporteFormaSysAdmin.jsp">  
+			<forward name="home" path="/reporte/ReporteFormaSysAdmin.jsp"/>
+			<forward name="agregar" path="/reporte/ReporteFormaSysAdmin.jsp"/>
+			<forward name="modificar" path="/reporte/ReporteFormaSysAdmin.jsp"/>
+			<forward name="eliminar" path="/reporte/ReporteFormaSysAdmin.jsp"/>
+			<forward name="consultar" path="/reporte/ReporteFormaSysAdmin.jsp"/>
+		</action>
+		<!-- agregado -->
+		<action path="/ReporteMovimientoAction" type="mx.com.iusacell.catalogo.web.reporte.struts.action.ReporteMovimientoAction" scope="request" validate="false" name="ReporteMovimientoForm" input="/reporte/ReporteMovForma.jsp">  
+			<forward name="home" path="/reporte/ReporteMovForma.jsp"/>
+			<forward name="agregar" path="/reporte/ReporteMovForma.jsp"/>
+			<forward name="modificar" path="/reporte/ReporteMovForma.jsp"/>
+			<forward name="eliminar" path="/reporte/ReporteMovForma.jsp"/>
+			<forward name="consultar" path="/reporte/ReporteMovForma.jsp"/>
+		</action>
+		<action path="/ReportePtoVentasAction" type="mx.com.iusacell.catalogo.web.reporte.struts.action.ReportePtoVentasAction" scope="request" validate="false" name="ReportePtoVentasForm" input="/reporte/ReportePtoVentasForma.jsp">  
+			<forward name="home" path="/reporte/ReportePtoVentasForma.jsp"/>
+			<forward name="agregar" path="/reporte/ReportePtoVentasForma.jsp"/>
+			<forward name="modificar" path="/reporte/ReportePtoVentasForma.jsp"/>
+			<forward name="eliminar" path="/reporte/ReportePtoVentasForma.jsp"/>
+			<forward name="consultar" path="/reporte/ReportePtoVentasForma.jsp"/>
+		</action>
+		
+		<action path="/PersonalAction" type="mx.com.iusacell.catalogo.web.personal.struts.action.PersonalAction" scope="request" validate="false" name="PersonalForm" input="/personal/PersonalForma.jsp">  
+			<forward name="home" path="/personal/PersonalForma.jsp"/>
+			<forward name="agregar" path="/personal/PersonalForma.jsp"/>
+			<forward name="modificar" path="/personal/PersonalForma.jsp"/>
+			<forward name="eliminar" path="/personal/PersonalForma.jsp"/>
+			<forward name="consultar" path="/personal/PersonalForma.jsp"/>
+		</action>
+		<action path="/PersonalMovAction" type="mx.com.iusacell.catalogo.web.personal.struts.action.PersonalMovAction" scope="request" validate="false" name="PersonalMovForm" input="/personal/PersonalMovForma.jsp">  
+			<forward name="home" path="/personal/PersonalMovForma.jsp"/>
+			<forward name="agregar" path="/personal/PersonalMovForma.jsp"/>
+			<forward name="modificar" path="/personal/PersonalMovForma.jsp"/>
+			<forward name="eliminar" path="/personal/PersonalMovForma.jsp"/>
+			<forward name="consultar" path="/personal/PersonalMovForma.jsp"/>
+			<forward name="buscarSup" path="/personal/PersonalSupForma.jsp"/>	
+		</action>
+		<action path="/ClaveReferenciaAction" type="mx.com.iusacell.catalogo.web.vendedores.struts.action.ClaveReferenciaAction" scope="request" validate="false" name="ClaveReferenciaForm" input="/vendedores/ClaveReferenciaForma.jsp">  
+			<forward name="home" path="/vendedores/ClaveReferenciaForma.jsp"/>
+			<forward name="agregar" path="/vendedores/ClaveReferenciaForma.jsp"/>
+			<forward name="modificar" path="/vendedores/ClaveReferenciaForma.jsp"/>
+			<forward name="eliminar" path="/vendedores/ClaveReferenciaForma.jsp"/>
+			<forward name="consultar" path="/vendedores/ClaveReferenciaForma.jsp"/>
+		</action>
+		
+		<!-- agregado -->
+		<action path="/ClaveReferenciaActionSysAdmin" type="mx.com.iusacell.catalogo.web.vendedores.struts.action.ClaveReferenciaAction" scope="request" validate="false" name="ClaveReferenciaForm" input="/vendedores/ClaveReferenciaFormaSysAdmin.jsp">  
+			<forward name="home" path="/vendedores/ClaveReferenciaFormaSysAdmin.jsp"/>
+			<forward name="agregar" path="/vendedores/ClaveReferenciaFormaSysAdmin.jsp"/>
+			<forward name="modificar" path="/vendedores/ClaveReferenciaFormaSysAdmin.jsp"/>
+			<forward name="eliminar" path="/vendedores/ClaveReferenciaFormaSysAdmin.jsp"/>
+			<forward name="consultar" path="/vendedores/ClaveReferenciaFormaSysAdmin.jsp"/>
+		</action>
+		<!-- agregado -->
+		
+		<action path="/AsistPuestoAction" type="mx.com.iusacell.catalogo.web.asistentes.struts.action.AsistPuestoAction" scope="request" validate="false" name="AsistPuestoForm" input="/asistentes/AsistPuestoForma.jsp">  
+			<forward name="home" path="/asistentes/AsistPuestoForma.jsp"/>
+			<forward name="agregar" path="/asistentes/AsistPuestoForma.jsp"/>
+			<forward name="modificar" path="/asistentes/AsistPuestoForma.jsp"/>
+			<forward name="eliminar" path="/asistentes/AsistPuestoForma.jsp"/>
+			<forward name="consultar" path="/asistentes/AsistPuestoForma.jsp"/>
+		</action>
+		<action path="/AsistSuperiorAction" type="mx.com.iusacell.catalogo.web.asistentes.struts.action.AsistSuperiorAction" scope="request" validate="false" name="AsistSuperiorForm" input="/asistentes/AsistSuperiorForma.jsp">  
+			<forward name="home" path="/asistentes/AsistSuperiorForma.jsp"/>
+			<forward name="agregar" path="/asistentes/AsistSuperiorForma.jsp"/>
+			<forward name="modificar" path="/asistentes/AsistSuperiorForma.jsp"/>
+			<forward name="eliminar" path="/asistentes/AsistSuperiorForma.jsp"/>
+			<forward name="consultar" path="/asistentes/AsistSuperiorForma.jsp"/>
+		</action>
+		<action path="/AsistPtoventasAction" type="mx.com.iusacell.catalogo.web.asistentes.struts.action.AsistPtoventasAction" scope="request" validate="false" name="AsistPtoventasForm" input="/asistentes/AsistPtoventasForma.jsp">  
+			<forward name="home" path="/asistentes/AsistPtoventasForma.jsp"/>
+			<forward name="agregar" path="/asistentes/AsistPtoventasForma.jsp"/>
+			<forward name="modificar" path="/asistentes/AsistPtoventasForma.jsp"/>
+			<forward name="eliminar" path="/asistentes/AsistPtoventasForma.jsp"/>
+			<forward name="consultar" path="/asistentes/AsistPtoventasForma.jsp"/>
+		</action>
+		<action path="/AsistReasignarAction" type="mx.com.iusacell.catalogo.web.asistentes.struts.action.AsistReasignarAction" scope="request" validate="false" name="AsistReasignarForm" input="/asistentes/AsistReasignarForma.jsp">  
+			<forward name="home" path="/asistentes/AsistReasignarForma.jsp"/>
+			<forward name="agregar" path="/asistentes/AsistReasignarForma.jsp"/>
+			<forward name="modificar" path="/asistentes/AsistReasignarForma.jsp"/>
+			<forward name="eliminar" path="/asistentes/AsistReasignarForma.jsp"/>
+			<forward name="consultar" path="/asistentes/AsistReasignarForma.jsp"/>
+		</action>
+		<action path="/AcctMgr" type="mx.com.iusacell.sysadmin.web.sysadmin.struts.action.AcctManagerAction" scope="request" validate="false" name="AcctManagerForm" input="/sysadmin/AcctMgrForma.jsp">  
+			<forward name="home" path="/sysadmin/AcctMgrForma.jsp"/>
+		</action>
+		<action path="/AccsMgr" type="mx.com.iusacell.sysadmin.web.sysadmin.struts.action.AccsManagerAction" scope="request" validate="false" name="AccsManagerForm" input="/sysadmin/AccsMgrForma.jsp">  
+			<forward name="home" path="/sysadmin/AccsMgrForma.jsp"/>
+		</action>
+		<action path="/AdmRoles" type="mx.com.iusacell.sysadmin.web.sysadmin.struts.action.AdmRolesAction" scope="request" validate="false" name="AdmRolesForm" input="/sysadmin/AdmRolesForma.jsp">  
+			<forward name="home" path="/sysadmin/AdmRolesForma.jsp"/>	
+			<forward name="agregar" path="/sysadmin/AdmRolesAgregar.jsp"/>	
+			<forward name="modificar" path="/sysadmin/AdmRolesModificar.jsp"/>	
+			
+		</action>
+		<action name="EmpresaForm" path="/EmpresaAction" scope="request" type="mx.com.iusacell.catalogo.web.empresa.struts.action.EmpresaAction">
+			<forward name="home" path="/empresa/EmpresaForma.jsp"/>
+			<forward name="agregar" path="/empresa/EmpresaForma.jsp"/>
+			<forward name="modificar" path="/empresa/EmpresaForma.jsp"/>
+			<forward name="eliminar" path="/empresa/EmpresaForma.jsp"/> 
+			<forward name="consultar" path="/empresa/EmpresaForma.jsp"/>
+		</action>
+		
+		<action path="/HorariosAction" type="mx.com.iusacell.catalogo.web.auxiliares.struts.action.HorariosAction" scope="request" validate="false" name="HorariosForm" input="/catalogo/HorariosHome.jsp">    
+			<forward name="home" path="/catalogo/HorariosHome.jsp"/>
+			<forward name="consultar" path="/catalogo/HorariosConsultar.jsp"/>
+			<forward name="agregar" path="/catalogo/HorariosAgregar.jsp"/>
+		</action>
+							
+		<action path="/MarcasAction" type="mx.com.iusacell.catalogo.web.auxiliares.struts.action.MarcasAction" scope="request" validate="false" name="MarcasForm" input="/catalogo/MarcasHome.jsp">    
+			<forward name="home" path="/catalogo/MarcasHome.jsp"/>
+			<forward name="agregar" path="/catalogo/MarcasAgregar.jsp"/>
+			<forward name="modificar" path="/catalogo/MarcasModificar.jsp"/>
+		</action>
+		
+		<action path="/ChecadorAction" type="mx.com.iusacell.catalogo.web.reporte.struts.action.ChecadorAction" scope="request" validate="false" name="ChecadorForm" input="/ChecadorHome.jsp">  
+			<forward name="home" path="ChecadorHome.jsp"/>
+		</action>
+
+        <action path="/ConfigValoresVentaAction" type="mx.com.iusacell.catalogo.web.valoresVenta.struts.action.ConfigValoresVentaAction" scope="request" validate="false" name="ConfigValoresVentaForm" input="/configuracion/ConfigNivelesForma.jsp">  
+			<forward name="home" path="/configuracion/ConfigNivelesForma.jsp"/>
+			<forward name="agregar" path="/configuracion/ConfigNivelesForma.jsp"/>
+			<forward name="modificar" path="/configuracion/ConfigNivelesForma.jsp"/>
+			<forward name="eliminar" path="/configuracion/ConfigNivelesForma.jsp"/>
+			<forward name="consultar" path="/configuracion/ConfigNivelesForma.jsp"/>
+		</action>
+    </action-mappings>
+
+
+<!-- ============================================= Controller Configuration -->
+
+    <controller
+       processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+
+<!-- ======================================== Message Resources Definitions -->
+
+    <message-resources parameter="MessageResources" />
+	<message-resources parameter="admincatalogoweb.resources.ApplicationResources" />
+	<message-resources parameter="admincatalogoweb.resources.ApplicationResources_es" />
+
+
+<!-- =============================================== Plug Ins Configuration -->
+
+  <!-- ======================================================= Tiles plugin -->
+  <!--
+     This plugin initialize Tiles definition factory. This later can takes some
+	 parameters explained here after. The plugin first read parameters from
+	 web.xml, thenoverload them with parameters defined here. All parameters
+	 are optional.
+     The plugin should be declared in each struts-config file.
+       - definitions-config: (optional)
+            Specify configuration file names. There can be several comma
+		    separated file names (default: ?? )
+       - moduleAware: (optional - struts1.1)
+            Specify if the Tiles definition factory is module aware. If true
+            (default), there will be one factory for each Struts module.
+			If false, there will be one common factory for all module. In this
+            later case, it is still needed to declare one plugin per module.
+            The factory will be initialized with parameters found in the first
+            initialized plugin (generally the one associated with the default
+            module).
+			  true : One factory per module. (default)
+			  false : one single shared factory for all modules
+	   - definitions-parser-validate: (optional)
+	        Specify if xml parser should validate the Tiles configuration file.
+			  true : validate. DTD should be specified in file header (default)
+			  false : no validation
+
+	  Paths found in Tiles definitions are relative to the main context.
+  -->
+
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+
+      <!-- Path to XML definition file -->
+      <set-property property="definitions-config"
+                       value="/WEB-INF/config/tiles-defs.xml" />
+      <!-- Set Module-awareness to true -->
+      <set-property property="moduleAware" value="true" />
+    </plug-in>
+
+
+  <!-- =================================================== Validator plugin -->
+
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property
+        property="pathnames"
+        value="/WEB-INF/config/validator-rules.xml,/WEB-INF/config/validation.xml"/>
+  </plug-in>
+  <!-- =================================================== Menu plugin -->
+
+  <plug-in className="net.sf.navigator.menu.MenuPlugIn">
+	  <set-property property="menuConfig" value="/WEB-INF/config/menu-config.xml"/>
+  </plug-in>
+  <!-- =================================================== Logger plugin -->
+	
+	<!--
+  <plug-in className="mx.com.iusacell.catalogo.servlet.Log4jInit">
+	  <set-property property="configFile" value="/WEB-INF/log4j.properties"/>
+	  <set-property property="logFile" value="/logs/adminCatalogo.log"/>
+  </plug-in>
+	-->
+</struts-config>
+

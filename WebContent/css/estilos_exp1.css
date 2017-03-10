@@ -1,0 +1,322 @@
+body
+{
+text-decoration: none;
+font-size: 8pt;
+color: #000000;
+font-family: Arial, Helvetica, sans-serif
+}
+
+.menuNVTC
+{
+text-decoration: none;
+font-size: 7.5pt;
+color: #5D5D5E;
+font-family: Arial, Helvetica, sans-serif
+}
+
+A:hover.menuNVTC
+{
+text-decoration: none;
+font-size: 7.5pt;
+color : #CC0000;
+font-family: Arial, Helvetica, sans-serif
+}
+
+.menuNVSC
+{
+text-decoration: none;
+font-size: 8.5pt;
+color: #5D5D5E;
+font-family: Arial, Helvetica, sans-serif
+}
+
+A:hover.menuNVSC
+{
+text-decoration: none;
+font-size: 8.5pt;
+color : #CC0000;
+font-family: Arial, Helvetica, sans-serif
+}
+
+.footer
+{
+text-decoration: none;
+font-size: 7.5pt;
+color: #666666;
+font-family: Arial, Helvetica, sans-serif
+}
+
+.bienvenidaRojo
+{
+text-decoration: none;
+font-size: 8.5pt;
+font-weight : bold;
+color: #CC0000;
+font-family: Arial, Helvetica, sans-serif
+}
+
+.bienvenidaNegro
+{
+text-decoration: none;
+font-size: 8.5pt;
+font-weight: bold;
+color: #333333;
+font-family: Arial, Helvetica, sans-serif
+}
+
+.txtContenido
+{
+text-decoration: none;
+font-size: 8.5pt;
+color: #333333;
+font-family: Arial, Helvetica, sans-serif
+}
+.txtContenido2
+{
+text-decoration: none;
+font-size: 9pt;
+color: blue;
+font-family: Arial, Helvetica, sans-serif
+}
+.txtContenidoLink
+{
+text-decoration: underline;
+font-size: 8.5pt;
+color: #333333;
+font-family: Arial, Helvetica, sans-serif
+}
+
+A:hover.txtContenidoLink
+{
+text-decoration: none;
+font-size: 8.5pt;
+color : #333333;
+font-family: Arial, Helvetica, sans-serif
+}
+
+.txtContenidoBold
+{
+text-decoration: none;
+font-size: 8.5pt;
+font-weight: bold;
+color: #333333;
+font-family: Arial, Helvetica, sans-serif
+}
+
+.txtContenidoRojo
+{
+text-decoration: none;
+font-size: 8.5pt;
+color: #CC0000;
+font-family: Arial, Helvetica, sans-serif
+}
+
+.txtContenidoRojoLink
+{
+text-decoration: underline;
+font-size: 8.5pt;
+color: #CC0000;
+font-family: Arial, Helvetica, sans-serif
+}
+
+A:hover.txtContenidoRojoLink
+{
+text-decoration: none;
+font-size: 8.5pt;
+color : #CC0000;
+font-family: Arial, Helvetica, sans-serif
+}
+
+.txtContenidoBlanco
+{
+text-decoration: none;
+font-size: 8.5pt;
+color: #FFFFFF;
+font-family: Arial, Helvetica, sans-serif
+}
+
+.txtBoxNum
+{
+background-color: #FFFFFF;
+text-decoration: none;
+font-size: 8.5pt;
+color: #333333;
+font-weight: normal;
+text-align: right;
+font-family: Arial, Helvetica, sans-serif;
+border: 1px;
+border-color:#666666;
+border-style: solid;
+}
+
+.boton
+{
+background-color: #CC0000;
+text-decoration: none;
+font-size: 8pt;
+color: #FFFFFF;
+font-weight: normal;
+font-family: Arial, Helvetica, sans-serif;
+border-bottom: #740505;
+border-left: #EB9A99;
+border-right: #740505;
+border-top: #EB9A99;
+border-style: solid;
+border-width: 1px;
+}
+
+.boton1
+{
+background-color: #CC0000;
+text-decoration: none;
+font-size: 10pt;
+color: #FFFFFF;
+font-weight: normal;
+font-family: Arial, Helvetica, sans-serif;
+border-bottom: #740505;
+border-left: #EB9A99;
+border-right: #740505;
+border-top: #EB9A99;
+border-style: solid;
+border-width: 1px;
+}
+.botones {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; COLOR: #000000; TEXT-DECORATION: none}
+.botones A:active { COLOR: #000000; TEXT-DECORATION: none }
+.botones A:link {	COLOR: #000000; TEXT-DECORATION: none }
+.botones A:visited { COLOR: #000000; TEXT-DECORATION: none }
+.botones A:hover { COLOR: #3300ff; TEXT-DECORATION: underline }
+
+
+.titulotop1 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: normal; color: #999999}
+.titulotop2 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 22px; font-weight: bold; color: #000000}
+
+.subtitulo1 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: normal; color: #000000}
+
+.titblanco {  font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: #FFFFFF}
+
+.ligamenublue {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #FFFFFF}
+.ligamenublue A:link {	COLOR: #FFFFFF; TEXT-DECORATION: none }
+.ligamenublue A:visited { COLOR: #66ffff; TEXT-DECORATION: none }
+.ligamenublue A:hover { COLOR: #ffff00; TEXT-DECORATION: none }
+
+
+td {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; valign: top; }
+.tdgris {  background: #E6E6E6; }
+
+.td_top_blue {  background: #6498CF; font-weight: bold; color: #FFFFFF; 
+BORDER-RIGHT: #000000 0.1em solid;
+BORDER-TOP: #66ccff 0.1em solid;
+BORDER-LEFT: #66ccff 0.1em solid;
+BORDER-BOTTOM: #000000 0.1em solid;
+}
+
+.td_blanco {  background: #FFFFFF;
+BORDER-RIGHT: #c1c1c1 0.1em solid;
+BORDER-BOTTOM: #c1c1c1 0.1em solid;
+BORDER-TOP: #ededed 0.1em solid;
+BORDER-LEFT: #ededed 0.1em solid;
+}
+
+.td_rojo {  background: #CC0000;
+BORDER-RIGHT: #c1c1c1 0.1em solid;
+BORDER-BOTTOM: #c1c1c1 0.1em solid;
+BORDER-TOP: #ededed 0.1em solid;
+BORDER-LEFT: #ededed 0.1em solid;
+}
+
+.td_amarillo {  background: #FFFF00;
+BORDER-RIGHT: #c1c1c1 0.1em solid;
+BORDER-BOTTOM: #c1c1c1 0.1em solid;
+BORDER-TOP: #ededed 0.1em solid;
+BORDER-LEFT: #ededed 0.1em solid;
+}
+
+.td_verde {  background: #00CC00;
+BORDER-RIGHT: #c1c1c1 0.1em solid;
+BORDER-BOTTOM: #c1c1c1 0.1em solid;
+BORDER-TOP: #ededed 0.1em solid;
+BORDER-LEFT: #ededed 0.1em solid;
+}
+
+.td_gris {  background: #999999;
+BORDER-RIGHT: #c1c1c1 0.1em solid;
+BORDER-BOTTOM: #c1c1c1 0.1em solid;
+BORDER-TOP: #ededed 0.1em solid;
+BORDER-LEFT: #ededed 0.1em solid;
+}
+
+.td_celeste {  background: #00FFFF;
+BORDER-RIGHT: #c1c1c1 0.1em solid;
+BORDER-BOTTOM: #c1c1c1 0.1em solid;
+BORDER-TOP: #ededed 0.1em solid;
+BORDER-LEFT: #ededed 0.1em solid;
+}
+
+.td_rosado {  background: #FF00FF;
+BORDER-RIGHT: #c1c1c1 0.1em solid;
+BORDER-BOTTOM: #c1c1c1 0.1em solid;
+BORDER-TOP: #ededed 0.1em solid;
+BORDER-LEFT: #ededed 0.1em solid;
+}
+
+.td_gris_tablas {  background: #f3f3f3;
+BORDER-RIGHT: #c1c1c1 0.1em solid;
+BORDER-BOTTOM: #c1c1c1 0.1em solid;
+BORDER-TOP: #ededed 0.1em solid;
+BORDER-LEFT: #ededed 0.1em solid;
+}
+
+.td_blanco_tablas { background: #fffff0;
+	border-top: white 0.1em solid;
+	border-bottom: black 0.1em solid;
+	border-left: white 0.1em solid;
+	border-right: black 0.1em solid;
+}
+
+.td_mensajes {  background: #B90000; font-weight: bold; color: #FFFFFF; font-family: Verdana, Arial, Helvetica, sans-serif; 
+BORDER-RIGHT: #000000 0.1em solid;
+BORDER-TOP: #EA0000 0.1em solid;
+BORDER-LEFT: #EA0000 0.1em solid;
+BORDER-BOTTOM: #000000 0.1em solid;
+}
+
+LI.list1 {
+
+list-style-image: url('../gifs/bulletreq.gif');
+FONT-FAMILY: ARIAL, HELVETICA, san-serif ; FONT-SIZE: 12px; COLOR: #000000;
+FONT-WEIGHT: Bold
+}
+
+BODY {
+SCROLLBAR-FACE-COLOR: #CC0000; SCROLLBAR-HIGHLIGHT-COLOR: #000000;
+SCROLLBAR-SHADOW-COLOR: #CC0000; SCROLLBAR-3DLIGHT-COLOR: #CC0000; 
+SCROLLBAR-ARROW-COLOR: #000000; SCROLLBAR-TRACK-COLOR: #ddeeee; 
+}
+
+FONT {FONT-FAMILY: ARIAL, HELVETICA, san-serif ; FONT-SIZE: 12px; COLOR: #000000;
+FONT-WEIGHT: normal;}
+
+.subtitulos {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold;}
+.resaltado {  font-weight: bold;}
+.resaltadogris {  font-family: ARIAL, HELVETICA, san-serif ; font-size: 14px; font-weight: bold; background: #f6f6f6
+BORDER-RIGHT: #e0e0e0 0.1em solid;
+BORDER-BOTTOM: #e0e0e0 0.1em solid;
+BORDER-TOP: #fdfdfd 0.1em solid;
+BORDER-LEFT: #fdfdfd 0.1em solid;
+}
+.resaltadorojo {  font-weight: bold; COLOR: #990000;}
+.textcalendario { color:#000000; TEXT-DECORATION: none; }
+.textcalendario  A:hover { color:#000000; background-color:#CCCCCC; TEXT-DECORATION: none; font-weight: bold; }
+
+.arboltxt {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; }
+.arboltxtbold {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; COLOR: #0000cc;}
+
+.areaText {  font-family: sans-serif; font-style: normal;}
+
+.errormessagerojo {  font-weight: bold;
+COLOR: #990000;
+font-size: 10pt;
+}
+.errormessagenegro {  font-weight: bold;
+COLOR: #000000;
+font-size: 10pt;}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+
+  <!--  <Resource name="jdbc/catalogo" auth="Container" type="javax.sql.DataSource"
+               maxActive="50" maxIdle="30" maxWait="10000"
+               username="SCSAEOCYC" password="iuwtyd845is"
+               driverClassName="oracle.jdbc.driver.OracleDriver"
+               url="jdbc:oracle:thin:@10.188.41.61:1521:CLIECONP"/>  -->
+
+</Context> 

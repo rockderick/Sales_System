@@ -1,0 +1,26 @@
+body.principalPagina{
+background-image: url('../images/chica_inicio.jpg');
+background-position: 0px 92px;
+background-attachment:fixed;
+background-repeat: no-repeat;
+}
+
+body.personalPagina{
+background-image: url('../images/personal_administrado.jpg');
+background-attachment:fixed;
+background-repeat: no-repeat;
+}
+
+#principalTable h3, #borde h3{
+ padding:0px;
+ border:none;
+ background: transparent;
+ /*background-image:url("../images/piepag.JPG");
+ border-color: red;
+ border-style: dotted;*/
+}
+/*body.puntosVentaForma{
+background-image: url('../images/chica_inicio_2.jpg');
+background-attachment:fixed;
+background-repeat: no-repeat;
+}*/
